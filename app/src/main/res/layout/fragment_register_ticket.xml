@@ -1,0 +1,195 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.RegisterTicketFragment">
+
+    <TextView
+        android:id="@+id/textView19"
+        style="@style/Theme.TitleExtraLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/digital_ticket_office"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMuseumNameRegisterTicket"
+        style="@style/Theme.DescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMuseumNameRegisterTicket" />
+
+    <TextView
+        android:id="@+id/textView21"
+        style="@style/Theme.DescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/Choose_the_day_and_time_of_the_visit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        style="@style/Theme.Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/selected_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <ImageView
+        android:id="@+id/imageViewCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDate"
+        app:layout_constraintEnd_toEndOf="@+id/textView21"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/textViewSelecteDate"
+        app:layout_constraintTop_toTopOf="@+id/textViewDate" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        style="@style/Theme.Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/selected_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+    <ImageView
+        android:id="@+id/imageViewSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/schedule"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTime"
+        app:layout_constraintEnd_toEndOf="@+id/textView21"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/textViewSelectedTime"
+        app:layout_constraintTop_toTopOf="@+id/textViewTime" />
+
+    <TextView
+        android:id="@+id/textView23"
+        style="@style/Theme.DescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/tickets_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTime" />
+
+    <FrameLayout
+        android:id="@+id/buttonIncrement"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_button_background"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/plus"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewAmount"
+        style="@style/Theme.DescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonIncrement"
+        app:layout_constraintEnd_toStartOf="@+id/buttonIncrement"
+        app:layout_constraintStart_toEndOf="@+id/buttonDecrement"
+        app:layout_constraintTop_toTopOf="@+id/buttonIncrement" />
+
+
+    <FrameLayout
+        android:id="@+id/buttonDecrement"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_button_background"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/minus"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        style="@style/Theme.DescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDecrement" />
+
+    <Button
+        android:id="@+id/buttonBuy"
+        style="@style/Theme.ButtonDefault"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/buy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIncrement" />
+
+    <TextView
+        android:id="@+id/textViewSelecteDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDate"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintTop_toTopOf="@+id/textViewDate" />
+
+    <TextView
+        android:id="@+id/textViewSelectedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTime"
+        app:layout_constraintStart_toEndOf="@+id/textViewTime"
+        app:layout_constraintTop_toTopOf="@+id/textViewTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
